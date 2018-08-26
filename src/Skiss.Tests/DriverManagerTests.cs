@@ -1,26 +1,26 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using FluentAssertions;
+using NUnit.Framework;
 using Skiss.Driver.UIAutomation;
 using Skiss.Lib;
 
 namespace Skiss.Tests
 {
-    [TestClass]
     public class DriverManagerTests
     {
-        [TestMethod]
+        [Test]
         public void get_Current_GivenDriverNotSet_ThrowsException()
         {
             Action gettingTheUnsetDriver = () => { var d = DriverManager.Current; };
-            Assert.ThrowsException<NoDriverException>(gettingTheUnsetDriver);
+            gettingTheUnsetDriver.Should().ThrowExactly<NoDriverException>();
         }
 
-        [TestMethod]
+        [Test]
         public void get_Current_GivenDriverSet_DoesNotThrowException()
         {
             var driver = new UIAutomationDriver();
             DriverManager.Current = driver;
-            Assert.AreSame(DriverManager.Current, driver);
+            DriverManager.Current.Should().BeSameAs(driver);
         }
     }
 }
