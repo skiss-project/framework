@@ -74,9 +74,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssignmentTests.cs" />
+    <Compile Include="ClickActionTests.cs" />
     <Compile Include="MissingCapabilityExceptionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DriverManagerTests.cs" />
+    <Compile Include="ReadActionTests.cs" />
+    <Compile Include="TypeActionTests.cs" />
+    <Compile Include="TestElement.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Skiss.Driver.UIAutomation\Skiss.Driver.UIAutomation.csproj">

@@ -25,9 +25,5 @@
             element.Should().BeSameAs(expected);
             driver.VerifyAll();
         }
-
-        private class TestElement : Element<TestElement>
-        {
-        }
     }
 }
