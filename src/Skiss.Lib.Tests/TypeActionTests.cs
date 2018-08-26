@@ -6,7 +6,7 @@
 
     public class TypeActionTests
     {
-        private TestElement continuation;
+        private CommonTestElement continuation;
 
         private string text;
 
@@ -15,7 +15,7 @@
         [SetUp]
         public void Setup()
         {
-            continuation = new TestElement();
+            continuation = new CommonTestElement();
             text = "Some typed text!";
             sut = new TypeActionForTest(continuation);
         }
@@ -33,9 +33,9 @@
             sut.TextTyped.Should().Be("Some typed text!");
         }
 
-        private class TypeActionForTest : TypeAction<TestElement>
+        private class TypeActionForTest : TypeAction<CommonTestElement>
         {
-            public TypeActionForTest(TestElement continuation)
+            public TypeActionForTest(CommonTestElement continuation)
                 : base(continuation)
             {
             }

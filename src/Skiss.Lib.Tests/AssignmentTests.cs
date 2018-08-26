@@ -13,14 +13,14 @@
         {
             var fixture = new Fixture();
             var task = fixture.Create<string>();
-            var expected = new TestElement();
+            var expected = new CommonTestElement();
 
             var driver = new Mock<IDriver>();
-            driver.Setup(d => d.Launch<TestElement>(task)).Returns(expected);
+            driver.Setup(d => d.Launch<CommonTestElement>(task)).Returns(expected);
 
             DriverManager.Current = driver.Object;
 
-            var element = Assignment<TestElement>.Launch(task);
+            var element = Assignment<CommonTestElement>.Launch(task);
 
             element.Should().BeSameAs(expected);
             driver.VerifyAll();

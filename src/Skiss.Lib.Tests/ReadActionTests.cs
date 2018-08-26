@@ -13,7 +13,7 @@
             sut.Text.Should().Be("Great success!");
         }
 
-        private class ReadActionForTest : ReadAction<TestElement>
+        private class ReadActionForTest : ReadAction<CommonTestElement>
         {
             protected override string GetText()
             {

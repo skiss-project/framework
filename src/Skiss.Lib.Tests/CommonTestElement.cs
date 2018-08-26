@@ -2,7 +2,7 @@
 {
     using Skiss.Lib;
 
-    public class TestElement : Element<TestElement>
+    public class CommonTestElement : Element<CommonTestElement>
     {
     }
 }

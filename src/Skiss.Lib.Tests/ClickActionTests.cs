@@ -6,14 +6,14 @@
 
     public class ClickActionTests
     {
-        private TestElement continuation;
+        private CommonTestElement continuation;
 
         private ClickActionForTest sut;
 
         [SetUp]
         public void Setup()
         {
-            continuation = new TestElement();
+            continuation = new CommonTestElement();
             sut = new ClickActionForTest(continuation);
         }
 
@@ -30,9 +30,9 @@
             sut.ClickPerformed.Should().BeTrue();
         }
 
-        private class ClickActionForTest : ClickAction<TestElement>
+        private class ClickActionForTest : ClickAction<CommonTestElement>
         {
-            public ClickActionForTest(TestElement continuation)
+            public ClickActionForTest(CommonTestElement continuation)
                 : base(continuation)
             {
             }
