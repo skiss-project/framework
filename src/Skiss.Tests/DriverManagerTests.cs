@@ -16,6 +16,7 @@
         [Test]
         public void get_Current_GivenDriverNotSet_ThrowsException()
         {
+            DriverManager.Current = null;
             Action gettingTheUnsetDriver = () => { var d = DriverManager.Current; };
             gettingTheUnsetDriver.Should().ThrowExactly<NoDriverException>();
         }
