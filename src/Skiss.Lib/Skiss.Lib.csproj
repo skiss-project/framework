@@ -49,6 +49,7 @@
     <Compile Include="IDriver.cs" />
     <Compile Include="NoDriverException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Assignment.cs" />
     <Compile Include="Element.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
