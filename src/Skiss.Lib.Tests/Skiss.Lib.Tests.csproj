@@ -7,8 +7,8 @@
     <ProjectGuid>{6DBA4BFA-2C11-47BA-8DD4-D9D163093B95}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Skiss.Tests</RootNamespace>
-    <AssemblyName>Skiss.Tests</AssemblyName>
+    <RootNamespace>Skiss.Lib.Tests</RootNamespace>
+    <AssemblyName>Skiss.Lib.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

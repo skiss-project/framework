@@ -1,4 +1,4 @@
-﻿namespace Skiss.Tests
+﻿namespace Skiss.Lib.Tests
 {
     using System;
     using FluentAssertions;
