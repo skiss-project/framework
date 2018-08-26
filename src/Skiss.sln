@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skiss.Tests", "Skiss.Tests\Skiss.Tests.csproj", "{6DBA4BFA-2C11-47BA-8DD4-D9D163093B95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skiss.Lib.Tests", "Skiss.Lib.Tests\Skiss.Lib.Tests.csproj", "{6DBA4BFA-2C11-47BA-8DD4-D9D163093B95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skiss.Driver.UIAutomation", "Skiss.Driver.UIAutomation\Skiss.Driver.UIAutomation.csproj", "{5439423A-C0B4-4B5E-B0D8-B5B19EE6EA58}"
 EndProject
