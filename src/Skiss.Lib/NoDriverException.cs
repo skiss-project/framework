@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Skiss.Lib
+﻿namespace Skiss.Lib
 {
+    using System;
+
     public class NoDriverException : Exception
     {
         public NoDriverException()
