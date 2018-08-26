@@ -8,7 +8,7 @@
         {
             get
             {
-                if(currentDriver == null)
+                if (currentDriver == null)
                 {
                     throw new NoDriverException();
                 }
