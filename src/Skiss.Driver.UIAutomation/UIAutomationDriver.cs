@@ -4,6 +4,26 @@ namespace Skiss.Driver.UIAutomation
 {
     public class UIAutomationDriver : IDriver
     {
+        public void End()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public ClickAction<T> FindClickable<T>(string identifier) where T : Element<T>
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public ReadAction<T> FindReadable<T>(string identifier) where T : Element<T>
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public TypeAction<T> FindTypable<T>(string identifier) where T : Element<T>
+        {
+            throw new System.NotImplementedException();
+        }
+
         public T Launch<T>(string task) where T : Element<T>, new()
         {
             throw new System.NotImplementedException();
