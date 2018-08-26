@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DriverManager.cs" />
-    <Compile Include="ICapability.cs" />
     <Compile Include="IDriver.cs" />
     <Compile Include="NoDriverException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
