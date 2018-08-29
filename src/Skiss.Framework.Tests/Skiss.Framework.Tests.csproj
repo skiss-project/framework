@@ -82,6 +82,7 @@
     <Compile Include="ReadActionTests.cs" />
     <Compile Include="TypeActionTests.cs" />
     <Compile Include="CommonTestElement.cs" />
+    <Compile Include="VerificationExtensionsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Skiss.Driver.UIAutomation\Skiss.Driver.UIAutomation.csproj">

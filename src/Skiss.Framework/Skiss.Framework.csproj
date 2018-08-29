@@ -57,6 +57,7 @@
     <Compile Include="Element.cs" />
     <Compile Include="ReadAction.cs" />
     <Compile Include="TypeAction.cs" />
+    <Compile Include="VerificationExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -67,27 +67,6 @@
             driver.VerifyAll();
         }
 
-        [Test]
-        public void Now_GivenAction_CallsActionOnSelf()
-        {
-            ElementForTest element = null;
-            void action(ElementForTest el) => element = el;
-
-            sut.Now(action);
-
-            element.Should().BeSameAs(sut);
-        }
-
-        [Test]
-        public void Now_GivenAction_ReturnsSelf()
-        {
-            void action(ElementForTest el)
-            {
-            }
-
-            sut.Now(action).Should().BeSameAs(sut);
-        }
-
         private class ElementForTest : Element<ElementForTest>
         {
             public new TypeAction<ElementForTest> FindTypable(string identifier) => base.FindTypable(identifier);
