@@ -1,4 +1,4 @@
-﻿namespace Skiss.Lib
+﻿namespace Skiss.Framework
 {
     using System;
 

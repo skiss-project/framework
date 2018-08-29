@@ -1,4 +1,4 @@
-﻿using Skiss.Lib;
+﻿using Skiss.Framework;
 
 namespace Skiss.Driver.UIAutomation
 {

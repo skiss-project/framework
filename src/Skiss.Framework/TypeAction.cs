@@ -1,4 +1,4 @@
-﻿namespace Skiss.Lib
+﻿namespace Skiss.Framework
 {
     public abstract class TypeAction<T> : ElementAction<T> where T : Element<T>
     {

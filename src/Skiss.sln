@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skiss.Lib.Tests", "Skiss.Lib.Tests\Skiss.Lib.Tests.csproj", "{6DBA4BFA-2C11-47BA-8DD4-D9D163093B95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skiss.Framework.Tests", "Skiss.Framework.Tests\Skiss.Framework.Tests.csproj", "{6DBA4BFA-2C11-47BA-8DD4-D9D163093B95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skiss.Driver.UIAutomation", "Skiss.Driver.UIAutomation\Skiss.Driver.UIAutomation.csproj", "{5439423A-C0B4-4B5E-B0D8-B5B19EE6EA58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skiss.Lib", "Skiss.Lib\Skiss.Lib.csproj", "{48C5ECAA-BFA5-4AEB-B988-A7242E6B2E20}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skiss.Framework", "Skiss.Framework\Skiss.Framework.csproj", "{48C5ECAA-BFA5-4AEB-B988-A7242E6B2E20}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skiss.AutomationTarget.WinForms", "Skiss.AutomationTarget.WinForms\Skiss.AutomationTarget.WinForms.csproj", "{4BFB33BF-3DA4-4CD6-B5F5-3CC182D083FD}"
 EndProject

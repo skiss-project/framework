@@ -1,6 +1,6 @@
-﻿namespace Skiss.Lib.Tests
+﻿namespace Skiss.Framework.Tests
 {
-    using Skiss.Lib;
+    using Skiss.Framework;
 
     public class CommonTestElement : Element<CommonTestElement>
     {

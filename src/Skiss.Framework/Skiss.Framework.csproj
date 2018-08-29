@@ -7,8 +7,8 @@
     <ProjectGuid>{48C5ECAA-BFA5-4AEB-B988-A7242E6B2E20}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Skiss.Lib</RootNamespace>
-    <AssemblyName>Skiss.Lib</AssemblyName>
+    <RootNamespace>Skiss.Framework</RootNamespace>
+    <AssemblyName>Skiss.Framework</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

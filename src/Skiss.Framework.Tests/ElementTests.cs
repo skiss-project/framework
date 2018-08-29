@@ -1,4 +1,4 @@
-﻿namespace Skiss.Lib.Tests
+﻿namespace Skiss.Framework.Tests
 {
     using System;
     using AutoFixture;

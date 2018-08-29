@@ -1,8 +1,8 @@
-﻿namespace Skiss.Lib.Tests
+﻿namespace Skiss.Framework.Tests
 {
     using FluentAssertions;
     using NUnit.Framework;
-    using Skiss.Lib;
+    using Skiss.Framework;
 
     public class TypeActionTests
     {

@@ -1,10 +1,10 @@
-﻿namespace Skiss.Lib.Tests
+﻿namespace Skiss.Framework.Tests
 {
     using AutoFixture;
     using FluentAssertions;
     using Moq;
     using NUnit.Framework;
-    using Skiss.Lib;
+    using Skiss.Framework;
 
     public class AssignmentTests
     {

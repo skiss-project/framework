@@ -46,9 +46,9 @@
     <Compile Include="UIAutomationDriver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Skiss.Lib\Skiss.Lib.csproj">
+    <ProjectReference Include="..\Skiss.Framework\Skiss.Framework.csproj">
       <Project>{48c5ecaa-bfa5-4aeb-b988-a7242e6b2e20}</Project>
-      <Name>Skiss.Lib</Name>
+      <Name>Skiss.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

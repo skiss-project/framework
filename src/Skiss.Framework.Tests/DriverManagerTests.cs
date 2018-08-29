@@ -1,10 +1,10 @@
-﻿namespace Skiss.Lib.Tests
+﻿namespace Skiss.Framework.Tests
 {
     using System;
     using FluentAssertions;
     using NUnit.Framework;
     using Skiss.Driver.UIAutomation;
-    using Skiss.Lib;
+    using Skiss.Framework;
 
     public class DriverManagerTests
     {
