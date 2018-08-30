@@ -4,7 +4,7 @@
     {
         Clickable,
 
-        Settable,
+        Typable,
 
         Readable,
 
