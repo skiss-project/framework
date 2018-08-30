@@ -1,32 +1,66 @@
 ﻿namespace Skiss.Framework.Tests
 {
     using System;
+    using AutoFixture;
     using FluentAssertions;
     using NUnit.Framework;
 
     public class ElementActionTests
     {
-        [Test]
-        public void MissingCapability_GivenCapabilityAndElement_ThrowsException()
+        private Capability capability;
+
+        private object element;
+
+        private string identifier;
+
+        private ElementActionForTest sut;
+
+        [SetUp]
+        public void Setup()
         {
-            var element = new object();
-            var capability = Capability.Clickable;
-            var sut = new ElementActionForTest();
+            var fixture = new Fixture();
 
-            Action missingCapabilityCall = () => sut.MissingCapability(capability, element);
+            capability = fixture.Create<Capability>();
+            element = fixture.Create<object>();
+            identifier = fixture.Create<string>();
 
-            var exception = missingCapabilityCall
+            sut = new ElementActionForTest();
+        }
+
+        [Test]
+        public void EnsureCapability_GivenIdentifierDoesNotMatchCapability_ThrowsException()
+        {
+            sut.HasCapabilityReturn = (false, element);
+
+            Action ensuring = () => sut.EnsureCapability(capability);
+
+            var exception = ensuring
                 .Should().ThrowExactly<MissingCapabilityException>()
                 .And;
 
             exception.Capability.Should().Be(capability);
             exception.Element.Should().BeSameAs(element);
         }
+
+        [Test]
+        public void EnsureCapability_GivenIdentifierMatchesCapability_DoesNotThrowException()
+        {
+            sut.HasCapabilityReturn = (true, element);
+
+            Action ensuring = () => sut.EnsureCapability(capability);
+
+            ensuring.Should().NotThrow();
+        }
     
         private class ElementActionForTest : ElementAction<CommonTestElement>
         {
-            public new void MissingCapability(Capability capability, object element) 
-                => base.MissingCapability(capability, element);
+            public (bool, object) HasCapabilityReturn { get; set; }
+
+            public new void EnsureCapability(Capability capability) 
+                => base.EnsureCapability(capability);
+
+            protected override (bool, object) HasCapability(Capability capability) 
+                => HasCapabilityReturn;
         }
     }
 }

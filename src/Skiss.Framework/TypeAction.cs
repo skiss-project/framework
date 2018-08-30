@@ -11,6 +11,7 @@
 
         public T Type(string text)
         {
+            EnsureCapability(Capability.Typable);
             PerformType(text);
             return continuation;
         }

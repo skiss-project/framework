@@ -11,6 +11,7 @@
 
         public T Click()
         {
+            EnsureCapability(Capability.Clickable);
             PerformClick();
             return continuation;
         }

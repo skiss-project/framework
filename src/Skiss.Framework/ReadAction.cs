@@ -6,7 +6,14 @@
         {
         }
 
-        public string Text => GetText();
+        public string Text
+        {
+            get
+            {
+                EnsureCapability(Capability.Readable);
+                return GetText();
+            }
+        }
 
         protected abstract string GetText();
     }
