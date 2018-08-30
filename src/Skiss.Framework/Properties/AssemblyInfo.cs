@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Skiss.Framework")]
@@ -8,3 +9,5 @@ using System.Runtime.InteropServices;
 [assembly: Guid("48c5ecaa-bfa5-4aeb-b988-a7242e6b2e20")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+[assembly: InternalsVisibleTo("Skiss.Framework.Tests")]
