@@ -11,7 +11,9 @@
         {
             object self = new object();
             object element = null;
-            void action(object el) => element = el;
+
+            void action(object el) 
+                => element = el;
 
             VerificationExtensions.Now(self, action);
 

@@ -69,19 +69,23 @@
 
         private class ElementForTest : Element<ElementForTest>
         {
-            public new TypeAction<ElementForTest> FindTypable(string identifier) => base.FindTypable(identifier);
+            public new TypeAction<ElementForTest> FindTypable(string identifier) 
+                => base.FindTypable(identifier);
 
-            public new ClickAction<ElementForTest> FindClickable(string identifier) => base.FindClickable(identifier);
+            public new ClickAction<ElementForTest> FindClickable(string identifier) 
+                => base.FindClickable(identifier);
 
-            public new ReadAction<ElementForTest> FindReadable(string identifier) => base.FindReadable(identifier);
+            public new ReadAction<ElementForTest> FindReadable(string identifier) 
+                => base.FindReadable(identifier);
         }
 
         private class ReadActionForTest : ReadAction<ElementForTest>
         {
-            protected override string GetText()
-            {
-                throw new NotImplementedException();
-            }
+            protected override string GetText() 
+                => throw new NotImplementedException();
+
+            protected override (bool, object) HasCapability(Capability capability) 
+                => throw new NotImplementedException();
         }
 
         private class ClickActionForTest : ClickAction<ElementForTest>
@@ -91,10 +95,11 @@
             {
             }
 
-            protected override void PerformClick()
-            {
-                throw new NotImplementedException();
-            }
+            protected override (bool, object) HasCapability(Capability capability) 
+                => throw new NotImplementedException();
+
+            protected override void PerformClick() 
+                => throw new NotImplementedException();
         }
 
         private class TypeActionForTest : TypeAction<ElementForTest>
@@ -104,10 +109,11 @@
             {
             }
 
-            protected override void PerformType(string text)
-            {
-                throw new NotImplementedException();
-            }
+            protected override (bool, object) HasCapability(Capability capability) 
+                => throw new NotImplementedException();
+
+            protected override void PerformType(string text) 
+                => throw new NotImplementedException();
         }
     }
 }
