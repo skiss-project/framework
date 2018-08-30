@@ -4,7 +4,7 @@
 
     public abstract class Element<T> where T : Element<T>
     {
-        public void End() => DriverManager.Current.End();
+        public void Stop() => DriverManager.Current.Stop();
 
         protected TypeAction<T> FindTypable(string identifier) => DriverManager.Current.FindTypable<T>(identifier);
 

@@ -58,11 +58,11 @@
         }
 
         [Test]
-        public void End_WhenInvoked_CallsDriver()
+        public void Stop_WhenInvoked_CallsDriver()
         {
-            driver.Setup(d => d.End());
+            driver.Setup(d => d.Stop());
 
-            sut.End();
+            sut.Stop();
 
             driver.VerifyAll();
         }

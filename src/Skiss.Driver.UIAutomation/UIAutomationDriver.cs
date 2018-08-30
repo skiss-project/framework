@@ -4,7 +4,7 @@ namespace Skiss.Driver.UIAutomation
 {
     public class UIAutomationDriver : IDriver
     {
-        public void End()
+        public void Stop()
         {
             throw new System.NotImplementedException();
         }
@@ -24,7 +24,7 @@ namespace Skiss.Driver.UIAutomation
             throw new System.NotImplementedException();
         }
 
-        public T Launch<T>(string task) where T : Element<T>, new()
+        public T Start<T>(string task) where T : Element<T>, new()
         {
             throw new System.NotImplementedException();
         }

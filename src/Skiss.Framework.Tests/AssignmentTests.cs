@@ -9,18 +9,18 @@
     public class AssignmentTests
     {
         [Test]
-        public void Launch_GivenDriverSet_LaunchesUsingDriver()
+        public void Start_GivenDriverSet_LaunchesUsingDriver()
         {
             var fixture = new Fixture();
             var task = fixture.Create<string>();
             var expected = new CommonTestElement();
 
             var driver = new Mock<IDriver>();
-            driver.Setup(d => d.Launch<CommonTestElement>(task)).Returns(expected);
+            driver.Setup(d => d.Start<CommonTestElement>(task)).Returns(expected);
 
             DriverManager.Current = driver.Object;
 
-            var element = Assignment<CommonTestElement>.Launch(task);
+            var element = Assignment<CommonTestElement>.Start(task);
 
             element.Should().BeSameAs(expected);
             driver.VerifyAll();

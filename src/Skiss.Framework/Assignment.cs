@@ -2,6 +2,6 @@
 {
     public static class Assignment<T> where T : Element<T>, new()
     {
-        public static T Launch(string task) => DriverManager.Current.Launch<T>(task);
+        public static T Start(string task) => DriverManager.Current.Start<T>(task);
     }
 }

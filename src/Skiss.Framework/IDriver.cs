@@ -2,7 +2,7 @@
 {
     public interface IDriver
     {
-        T Launch<T>(string task) 
+        T Start<T>(string task) 
             where T : Element<T>, new();
 
         TypeAction<T> FindTypable<T>(string identifier) 
@@ -14,6 +14,6 @@
         ReadAction<T> FindReadable<T>(string identifier) 
             where T : Element<T>;
 
-        void End();
+        void Stop();
     }
 }
