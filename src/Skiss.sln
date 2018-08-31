@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skiss.Driver.UIAutomation",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skiss.AutomationTarget.WinForms", "Skiss.AutomationTarget.WinForms\Skiss.AutomationTarget.WinForms.csproj", "{4BFB33BF-3DA4-4CD6-B5F5-3CC182D083FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skiss.AutomationTarget.WinForms.UITests", "Skiss.AutomationTarget.WinForms.UITests\Skiss.AutomationTarget.WinForms.UITests.csproj", "{C08016C7-F46D-4F39-B41A-96EFB546D47C}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skiss.Framework", "Skiss.Framework\Skiss.Framework.csproj", "{B0B8A7DF-72C9-420E-9B64-9FBFD9AA6BCB}"
 EndProject
 Global
@@ -29,6 +31,10 @@ Global
 		{4BFB33BF-3DA4-4CD6-B5F5-3CC182D083FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BFB33BF-3DA4-4CD6-B5F5-3CC182D083FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BFB33BF-3DA4-4CD6-B5F5-3CC182D083FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C08016C7-F46D-4F39-B41A-96EFB546D47C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C08016C7-F46D-4F39-B41A-96EFB546D47C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C08016C7-F46D-4F39-B41A-96EFB546D47C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C08016C7-F46D-4F39-B41A-96EFB546D47C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B0B8A7DF-72C9-420E-9B64-9FBFD9AA6BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B0B8A7DF-72C9-420E-9B64-9FBFD9AA6BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0B8A7DF-72C9-420E-9B64-9FBFD9AA6BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
