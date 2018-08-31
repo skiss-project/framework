@@ -78,7 +78,7 @@
             this.invoke.TabIndex = 3;
             this.invoke.Text = "Go do!";
             this.invoke.UseVisualStyleBackColor = true;
-            this.invoke.Click += new System.EventHandler(this.invoke_Click);
+            this.invoke.Click += new System.EventHandler(this.InvokeClick);
             // 
             // results
             // 
