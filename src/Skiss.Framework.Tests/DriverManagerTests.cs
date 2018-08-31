@@ -2,8 +2,8 @@
 {
     using System;
     using FluentAssertions;
+    using Moq;
     using NUnit.Framework;
-    using Skiss.Driver.UIAutomation;
     using Skiss.Framework;
 
     public class DriverManagerTests
@@ -19,7 +19,7 @@
         [Test]
         public void CurrentGetter_GivenDriverSet_DoesNotThrowException()
         {
-            var driver = new UIAutomationDriver();
+            var driver = Mock.Of<IDriver>();
             DriverManager.Current = driver;
             DriverManager.Current.Should().BeSameAs(driver);
         }
