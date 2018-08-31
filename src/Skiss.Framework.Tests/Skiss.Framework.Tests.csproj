@@ -86,14 +86,14 @@
     <Compile Include="VerificationExtensionsTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Skiss.Framework\Skiss.Framework.csproj">
-      <Project>{48c5ecaa-bfa5-4aeb-b988-a7242e6b2e20}</Project>
-      <Name>Skiss.Framework</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Skiss.Framework\Skiss.Framework.csproj">
+      <Project>{b0b8a7df-72c9-420e-9b64-9fbfd9aa6bcb}</Project>
+      <Name>Skiss.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
