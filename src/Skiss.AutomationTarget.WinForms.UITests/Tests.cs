@@ -13,7 +13,7 @@
             DriverManager.Current = new UIAutomationDriver();
         }
 
-        [Test]
+        [Test, Ignore("No implementation to back this")]
         public void WinFormsTarget_GivenExecutable_ShouldStartAndStop()
         {
             Assignment<CalculatorWindow>
@@ -21,7 +21,7 @@
                 .Stop();
         }
 
-        [Test]
+        [Test, Ignore("No implementation to back this")]
         public void WinFormsTarget_WhenAddingOneAndTwo_ResultIsThree()
         {
             Assignment<CalculatorWindow>
