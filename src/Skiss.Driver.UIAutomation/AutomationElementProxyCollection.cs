@@ -22,8 +22,8 @@
         public int Count 
             => elements.Count;
 
-        public bool IsSynchronized 
-            => elements.IsSynchronized;
+        public bool IsSynchronized
+            => false;
 
         // property does not return "this" as the original does 
         public object SyncRoot { get; }
