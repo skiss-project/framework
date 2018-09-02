@@ -40,8 +40,14 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutomationElementProxy.cs" />
+    <Compile Include="AutomationElementProxyCollection.cs" />
+    <Compile Include="IAutomationElement.cs" />
+    <Compile Include="IAutomationElementCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIAutomationDriver.cs" />
   </ItemGroup>
