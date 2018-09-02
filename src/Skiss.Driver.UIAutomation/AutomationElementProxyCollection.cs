@@ -11,6 +11,8 @@
 
         public AutomationElementProxyCollection(AutomationElementCollection elements)
         {
+            SyncRoot = new object();
+
             this.elements = elements
                 .Cast<AutomationElement>()
                 .Select(e => new AutomationElementProxy(e)) 
@@ -23,8 +25,8 @@
         public bool IsSynchronized 
             => elements.IsSynchronized;
 
-        public object SyncRoot 
-            => elements.SyncRoot;
+        // property does not return "this" as the original does 
+        public object SyncRoot { get; }
 
         public IAutomationElement this[int index] 
             => elements[index] as IAutomationElement;

@@ -48,9 +48,10 @@
         }
 
         [Test]
-        public void SyncRootGetter_Always_ShouldNotBeNull()
+        public void SyncRootGetter_Always_ReturnsOtherInstanceThanSut()
         {
             sut.SyncRoot.Should().NotBeNull();
+            sut.SyncRoot.Should().NotBeSameAs(sut);
         }
 
         [Test]
