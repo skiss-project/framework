@@ -5,6 +5,8 @@
 
     internal class AutomationElementProxy : IAutomationElement
     {
+		private static readonly AutomationElementProxy root = new AutomationElementProxy();
+
         private readonly AutomationElement element;
 
         public AutomationElementProxy()
@@ -12,14 +14,16 @@
         {
         }
 
-        public AutomationElementProxy(AutomationElement element) 
-            => this.element = element;
+		public AutomationElementProxy(AutomationElement element)
+		{
+			this.element = element;
+		}
 
         public AutomationElement.AutomationElementInformation Current 
             => element.Current;
 
-        public IAutomationElement RootElement 
-            => new AutomationElementProxy();
+		public IAutomationElement RootElement
+			=> root;
 
         public IAutomationElementCollection FindAll(TreeScope scope, Condition condition) 
             => new AutomationElementProxyCollection(element.FindAll(scope, condition));
