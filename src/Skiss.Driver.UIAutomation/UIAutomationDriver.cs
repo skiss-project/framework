@@ -1,7 +1,7 @@
-﻿using Skiss.Framework;
-
-namespace Skiss.Driver.UIAutomation
+﻿namespace Skiss.Driver.UIAutomation
 {
+    using Skiss.Framework;
+
     public class UIAutomationDriver : IDriver
     {
         public void Stop()
