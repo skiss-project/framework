@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="AutomationElementProxy.cs" />
     <Compile Include="AutomationElementProxyCollection.cs" />
+    <Compile Include="Guard.cs" />
     <Compile Include="IAutomationElement.cs" />
     <Compile Include="IAutomationElementCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
