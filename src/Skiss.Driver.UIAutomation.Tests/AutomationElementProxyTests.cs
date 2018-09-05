@@ -25,6 +25,16 @@
         }
 
         [Test]
+        public void Constructor_GivenNullElement_ThrowsException()
+        {
+            Action constructing = () => new AutomationElementProxy(null);
+
+            constructing
+                .Should().ThrowExactly<ArgumentNullException>()
+                .Which.ParamName.Should().Be("element");
+        }
+
+        [Test]
         public void FindAll_GivenNullCondition_ThrowsException()
         {
             Action finding = () => sut.FindAll(TreeScope.Subtree, null);

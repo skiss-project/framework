@@ -16,6 +16,7 @@
 
 		public AutomationElementProxy(AutomationElement element)
 		{
+            Guard.AgainstNull(element, nameof(element));
 			this.element = element;
 		}
 
