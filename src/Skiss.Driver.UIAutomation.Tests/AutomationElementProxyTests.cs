@@ -35,6 +35,15 @@
         }
 
         [Test]
+        public void RootElementGetter_Always_ReturnsRootProxy()
+        {
+            var rootInfo = AutomationElement.RootElement.Current;
+            var proxiedInfo = sut.RootElement.Current;
+
+            proxiedInfo.Should().Be(rootInfo);
+        }
+
+        [Test]
         public void FindAll_GivenNullCondition_ThrowsException()
         {
             Action finding = () => sut.FindAll(TreeScope.Subtree, null);
