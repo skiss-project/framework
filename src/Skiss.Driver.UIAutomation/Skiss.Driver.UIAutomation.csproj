@@ -33,6 +33,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Polly, Version=6.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Polly.6.1.0\lib\netstandard2.0\Polly.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,14 +52,20 @@
     <Compile Include="Guard.cs" />
     <Compile Include="IAutomationElement.cs" />
     <Compile Include="IAutomationElementCollection.cs" />
+    <Compile Include="IWindowHandleExtractor.cs" />
+    <Compile Include="IProcess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIAutomationDriver.cs" />
+    <Compile Include="WindowHandleExtractor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Skiss.Framework\Skiss.Framework.csproj">
       <Project>{b0b8a7df-72c9-420e-9b64-9fbfd9aa6bcb}</Project>
       <Name>Skiss.Framework</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
