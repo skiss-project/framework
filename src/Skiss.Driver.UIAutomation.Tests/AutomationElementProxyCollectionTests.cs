@@ -21,6 +21,16 @@
         }
 
         [Test]
+        public void Constructor_GivenNullElementCollection_ThrowsException()
+        {
+            Action constructing = () => new AutomationElementProxyCollection(null);
+
+            constructing
+                .Should().ThrowExactly<ArgumentNullException>()
+                .Which.ParamName.Should().Be("elements");
+        }
+
+        [Test]
         public void Constructor_GivenElementCollection_InitializesProxyCollection()
         {
             CompareCollections(sut, elements);

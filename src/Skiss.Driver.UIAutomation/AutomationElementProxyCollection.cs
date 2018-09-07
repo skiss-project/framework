@@ -11,6 +11,8 @@
 
         public AutomationElementProxyCollection(AutomationElementCollection elements)
         {
+            Guard.AgainstNull(elements, nameof(elements));
+
             SyncRoot = new object();
 
             this.elements = elements
