@@ -6,6 +6,7 @@
     {
         public static T Now<T>(this T self, Action<T> action)
         {
+            Guard.AgainstNull(action, nameof(action));
             action(self);
             return self;
         }
