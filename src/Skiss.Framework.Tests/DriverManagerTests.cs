@@ -11,6 +11,7 @@
         [Test]
         public void CurrentGetter_GivenDriverNotSet_ThrowsException()
         {
+            DriverManager.Current = null;
             Action gettingTheUnsetDriver = () => { var d = DriverManager.Current; };
             gettingTheUnsetDriver.Should().ThrowExactly<NoDriverException>();
         }
@@ -21,16 +22,6 @@
             var driver = Mock.Of<IDriver>();
             DriverManager.Current = driver;
             DriverManager.Current.Should().BeSameAs(driver);
-        }
-
-        [Test]
-        public void CurrentSetter_GivenNullDriver_ThrowsException()
-        {
-            Action setting = () => DriverManager.Current = null;
-
-            setting
-                .Should().ThrowExactly<ArgumentNullException>()
-                .Which.ParamName.Should().Be("value");
         }
     }
 }

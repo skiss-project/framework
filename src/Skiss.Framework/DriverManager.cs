@@ -18,7 +18,6 @@
 
             set
             {
-                Guard.AgainstNull(value, nameof(value));
                 currentDriver = value;
             }
         }
