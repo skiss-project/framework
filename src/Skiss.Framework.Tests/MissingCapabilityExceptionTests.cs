@@ -1,5 +1,6 @@
 ﻿namespace Skiss.Framework.Tests
 {
+    using System;
     using FluentAssertions;
     using NUnit.Framework;
     using Skiss.Framework;
@@ -16,6 +17,13 @@
 
             sut.Capability.Should().Be(expectedCapability);
             sut.Element.Should().BeSameAs(expectedElement);
+        }
+
+        [Test]
+        public void Constructor_GivenNullElement_DoesNotThrowException()
+        {
+            var sut = new MissingCapabilityException(Capability.Readable, null);
+            sut.Element.Should().BeNull();
         }
     }
 }
