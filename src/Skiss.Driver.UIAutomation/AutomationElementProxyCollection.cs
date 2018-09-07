@@ -31,11 +31,11 @@
         public IAutomationElement this[int index] 
             => elements[index] as IAutomationElement;
 
-        public void CopyTo(IAutomationElement[] array, int index) 
-            => elements.CopyTo(array, index);
+        public void CopyTo(IAutomationElement[] dest, int index) 
+            => elements.CopyTo(dest, index);
 
-        public void CopyTo(Array array, int index) 
-            => elements.CopyTo(array, index);
+        public void CopyTo(Array dest, int index) 
+            => elements.CopyTo(dest, index);
 
         public IEnumerator GetEnumerator() 
             => elements.GetEnumerator();
