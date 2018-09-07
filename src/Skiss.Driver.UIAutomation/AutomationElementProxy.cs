@@ -14,28 +14,28 @@
         {
         }
 
-		public AutomationElementProxy(AutomationElement element)
-		{
+        public AutomationElementProxy(AutomationElement element)
+        {
             Guard.AgainstNull(element, nameof(element));
-			this.element = element;
-		}
+            this.element = element;
+        }
 
-        public AutomationElement.AutomationElementInformation Current 
+        public AutomationElement.AutomationElementInformation Current
             => element.Current;
 
         public IAutomationElement RootElement
             => RootProxy;
 
-        public IAutomationElementCollection FindAll(TreeScope scope, Condition condition) 
+        public IAutomationElementCollection FindAll(TreeScope scope, Condition condition)
             => new AutomationElementProxyCollection(element.FindAll(scope, condition));
 
-        public IAutomationElement FindFirst(TreeScope scope, Condition condition) 
+        public IAutomationElement FindFirst(TreeScope scope, Condition condition)
             => new AutomationElementProxy(element.FindFirst(scope, condition));
 
-        public IAutomationElement FromHandle(IntPtr hwnd) 
+        public IAutomationElement FromHandle(IntPtr hwnd)
             => new AutomationElementProxy(AutomationElement.FromHandle(hwnd));
 
-        public bool TryGetCurrentPattern(AutomationPattern pattern, out object patternObject) 
+        public bool TryGetCurrentPattern(AutomationPattern pattern, out object patternObject)
             => element.TryGetCurrentPattern(pattern, out patternObject);
     }
 }
