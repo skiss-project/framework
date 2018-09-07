@@ -6,11 +6,13 @@
 
         public TypeAction(T continuation)
         {
+            Guard.AgainstNull(continuation, nameof(continuation));
             this.continuation = continuation;
         }
 
         public T Type(string text)
         {
+            Guard.AgainstNull(text, nameof(text));
             EnsureCapability(Capability.Typable);
             PerformType(text);
             return continuation;

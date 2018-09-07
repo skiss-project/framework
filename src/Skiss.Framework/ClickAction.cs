@@ -6,6 +6,7 @@
 
         public ClickAction(T continuation)
         {
+            Guard.AgainstNull(continuation, nameof(continuation));
             this.continuation = continuation;
         }
 

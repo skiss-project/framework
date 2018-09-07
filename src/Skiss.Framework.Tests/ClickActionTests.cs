@@ -22,6 +22,16 @@
         }
 
         [Test]
+        public void Constructor_GivenNullContinuation_ThrowsException()
+        {
+            Action constructing = () => new ClickActionForTest(null);
+
+            constructing
+                .Should().ThrowExactly<ArgumentNullException>()
+                .Which.ParamName.Should().Be("continuation");
+        }
+
+        [Test]
         public void Click_GivenCapabilityNotProvided_ThrowsException()
         {
             sut.HasCapabilityReturn = (false, element);

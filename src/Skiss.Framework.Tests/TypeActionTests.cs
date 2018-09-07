@@ -25,6 +25,26 @@
         }
 
         [Test]
+        public void Constructor_GivenNullContinuation_ThrowsException()
+        {
+            Action constructing = () => new TypeActionForTest(null);
+
+            constructing
+                .Should().ThrowExactly<ArgumentNullException>()
+                .Which.ParamName.Should().Be("continuation");
+        }
+
+        [Test]
+        public void Type_GivenNullText_ThrowsException()
+        {
+            Action typing = () => sut.Type(null);
+
+            typing
+                .Should().ThrowExactly<ArgumentNullException>()
+                .Which.ParamName.Should().Be("text");
+        }
+
+        [Test]
         public void Type_GivenCapabilityNotProvided_ThrowsException()
         {
             sut.HasCapabilityReturn = (false, element);
