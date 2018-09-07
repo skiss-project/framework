@@ -1,7 +1,5 @@
 ﻿namespace Skiss.Framework
 {
-    using System;
-
     public abstract class Element<T> where T : Element<T>
     {
         public void Stop() => DriverManager.Current.Stop();
