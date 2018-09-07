@@ -1,6 +1,6 @@
 ﻿namespace Skiss.AutomationTarget.WinForms
 {
-	partial class Form1
+	partial class AwesomeCalculatorForm
 	{
 		/// <summary>
 		/// Required designer variable.
