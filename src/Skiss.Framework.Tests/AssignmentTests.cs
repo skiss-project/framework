@@ -1,5 +1,6 @@
 ﻿namespace Skiss.Framework.Tests
 {
+    using System;
     using AutoFixture;
     using FluentAssertions;
     using Moq;
@@ -8,6 +9,16 @@
 
     public class AssignmentTests
     {
+        [Test]
+        public void Start_GivenNullTask_ThrowsException()
+        {
+            Action starting = () => Assignment<CommonTestElement>.Start(null);
+
+            starting
+                .Should().ThrowExactly<ArgumentNullException>()
+                .Which.ParamName.Should().Be("task");
+        }
+
         [Test]
         public void Start_GivenDriverSet_LaunchesUsingDriver()
         {
