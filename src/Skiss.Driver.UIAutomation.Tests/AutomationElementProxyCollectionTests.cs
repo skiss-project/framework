@@ -55,11 +55,31 @@
         }
 
         [Test]
+        public void CopyTo_GivenNullArrayInstace_ThrowsException()
+        {
+            Action copying = () => sut.CopyTo((Array)null, 0);
+
+            copying
+                .Should().ThrowExactly<ArgumentNullException>()
+                .Which.ParamName.Should().Be("dest");
+        }
+
+        [Test]
         public void CopyTo_GivenArrayInstance_CopiesElementProxiesToArray()
         {
             var array = Array.CreateInstance(typeof(IAutomationElement), sut.Count);
             sut.CopyTo(array, 0);
             CompareCollections(array, elements);
+        }
+
+        [Test]
+        public void CopyTo_GivenNullElementArray_ThrowsException()
+        {
+            Action copying = () => sut.CopyTo((IAutomationElement[])null, 0);
+
+            copying
+                .Should().ThrowExactly<ArgumentNullException>()
+                .Which.ParamName.Should().Be("dest");
         }
 
         [Test]
