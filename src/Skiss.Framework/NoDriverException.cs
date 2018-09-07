@@ -7,15 +7,5 @@
         public NoDriverException()
         {
         }
-
-        public NoDriverException(string message) 
-            : base(message)
-        {
-        }
-
-        public NoDriverException(string message, Exception inner) 
-            : base(message, inner)
-        {
-        }
     } 
 }
