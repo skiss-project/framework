@@ -1,4 +1,6 @@
-﻿namespace Skiss.Framework.Tests
+﻿// Copyright (c) Simon Wendel. All rights reserved.
+
+namespace Skiss.Framework.Tests
 {
     using System;
     using FluentAssertions;

@@ -1,4 +1,6 @@
-﻿namespace Skiss.Driver.UIAutomation
+﻿// Copyright (c) Simon Wendel. All rights reserved.
+
+namespace Skiss.Driver.UIAutomation
 {
     using System;
     using System.Windows.Automation;

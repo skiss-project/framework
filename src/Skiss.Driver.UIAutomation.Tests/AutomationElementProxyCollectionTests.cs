@@ -1,4 +1,6 @@
-﻿namespace Skiss.Driver.UIAutomation.Tests
+﻿// Copyright (c) Simon Wendel. All rights reserved.
+
+namespace Skiss.Driver.UIAutomation.Tests
 {
     using System;
     using System.Collections;

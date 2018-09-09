@@ -1,4 +1,6 @@
-﻿namespace Skiss.AutomationTarget.WinForms.UITests
+﻿// Copyright (c) Simon Wendel. All rights reserved.
+
+namespace Skiss.AutomationTarget.WinForms.UITests
 {
     using FluentAssertions;
     using NUnit.Framework;

@@ -1,3 +1,5 @@
+﻿// Copyright (c) Simon Wendel. All rights reserved.
+
 using System.Reflection;
 using System.Runtime.InteropServices;
 

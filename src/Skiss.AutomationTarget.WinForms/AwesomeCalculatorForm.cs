@@ -1,4 +1,6 @@
-﻿namespace Skiss.AutomationTarget.WinForms
+﻿// Copyright (c) Simon Wendel. All rights reserved.
+
+namespace Skiss.AutomationTarget.WinForms
 {
     using System;
     using System.Windows.Forms;

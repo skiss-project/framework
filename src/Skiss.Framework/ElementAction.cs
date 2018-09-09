@@ -1,4 +1,6 @@
-﻿namespace Skiss.Framework
+﻿// Copyright (c) Simon Wendel. All rights reserved.
+
+namespace Skiss.Framework
 {
     public abstract class ElementAction<T> where T : Element<T>
     {
