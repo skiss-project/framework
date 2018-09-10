@@ -12,7 +12,7 @@ namespace Skiss.Driver.UIAutomation
         private static readonly IntPtr IllegalHandle = IntPtr.Zero;
 
         private readonly Policy<IntPtr> policy;
-            
+
         public WindowHandleExtractor()
         {
             var retry = Policy
@@ -32,7 +32,7 @@ namespace Skiss.Driver.UIAutomation
             return policy.Execute(() => process.MainWindowHandle);
         }
 
-        private TimeSpan ExponentialBackoff(int attempt) 
+        private TimeSpan ExponentialBackoff(int attempt)
             => TimeSpan.FromMilliseconds(Math.Pow(2, attempt));
 
         private IntPtr ReportThisAsFailure()

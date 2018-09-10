@@ -108,7 +108,7 @@ namespace Skiss.Driver.UIAutomation.Tests
             var elements = elementCollection.Cast<AutomationElement>();
 
             proxies.Count().Should().Be(elements.Count());
-   
+
             proxies.Select(p => p.Current.AutomationId + p.Current.ProcessId)
                 .Should().BeEquivalentTo(elements.Select(e => e.Current.AutomationId + e.Current.ProcessId));
         }

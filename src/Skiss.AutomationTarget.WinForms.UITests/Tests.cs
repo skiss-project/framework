@@ -15,7 +15,8 @@ namespace Skiss.AutomationTarget.WinForms.UITests
             DriverManager.Current = new UIAutomationDriver();
         }
 
-        [Test, Ignore("No implementation to back this")]
+        [Test]
+        [Ignore("No implementation to back this")]
         public void WinFormsTarget_GivenExecutable_ShouldStartAndStop()
         {
             Assignment<CalculatorWindow>
@@ -23,7 +24,8 @@ namespace Skiss.AutomationTarget.WinForms.UITests
                 .Stop();
         }
 
-        [Test, Ignore("No implementation to back this")]
+        [Test]
+        [Ignore("No implementation to back this")]
         public void WinFormsTarget_WhenAddingOneAndTwo_ResultIsThree()
         {
             Assignment<CalculatorWindow>

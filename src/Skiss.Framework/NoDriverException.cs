@@ -9,5 +9,5 @@ namespace Skiss.Framework
         public NoDriverException()
         {
         }
-    } 
+    }
 }

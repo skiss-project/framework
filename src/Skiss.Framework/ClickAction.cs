@@ -2,7 +2,8 @@
 
 namespace Skiss.Framework
 {
-    public abstract class ClickAction<T> : ElementAction<T> where T : Element<T>
+    public abstract class ClickAction<T> : ElementAction<T>
+        where T : Element<T>
     {
         private readonly T continuation;
 

@@ -74,7 +74,7 @@ namespace Skiss.Framework.Tests
             protected override (bool, object) HasCapability(Capability capability)
                 => HasCapabilityReturn;
 
-            protected override void PerformClick() 
+            protected override void PerformClick()
                 => ClickPerformed = true;
         }
     }

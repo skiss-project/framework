@@ -53,15 +53,15 @@ namespace Skiss.Framework.Tests
 
             ensuring.Should().NotThrow();
         }
-    
+
         private class ElementActionForTest : ElementAction<CommonTestElement>
         {
             public (bool, object) HasCapabilityReturn { get; set; }
 
-            public new void EnsureCapability(Capability capability) 
+            public new void EnsureCapability(Capability capability)
                 => base.EnsureCapability(capability);
 
-            protected override (bool, object) HasCapability(Capability capability) 
+            protected override (bool, object) HasCapability(Capability capability)
                 => HasCapabilityReturn;
         }
     }

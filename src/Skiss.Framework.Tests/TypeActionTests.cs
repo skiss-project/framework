@@ -87,7 +87,7 @@ namespace Skiss.Framework.Tests
             protected override (bool, object) HasCapability(Capability capability)
                 => HasCapabilityReturn;
 
-            protected override void PerformType(string text) 
+            protected override void PerformType(string text)
                 => TextTyped = text;
         }
     }

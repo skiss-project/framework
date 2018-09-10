@@ -52,7 +52,7 @@ namespace Skiss.Framework.Tests
         public void FindReadable_GivenIdentifier_CallsDriver()
         {
             var readAction = new ReadActionForTest();
-           
+
             driver.Setup(d => d.FindReadable<ElementForTest>(identifier)).Returns(readAction);
 
             sut.FindReadable(identifier).Should().BeSameAs(readAction);
@@ -71,50 +71,50 @@ namespace Skiss.Framework.Tests
 
         private class ElementForTest : Element<ElementForTest>
         {
-            public new TypeAction<ElementForTest> FindTypable(string identifier) 
+            public new TypeAction<ElementForTest> FindTypable(string identifier)
                 => base.FindTypable(identifier);
 
-            public new ClickAction<ElementForTest> FindClickable(string identifier) 
+            public new ClickAction<ElementForTest> FindClickable(string identifier)
                 => base.FindClickable(identifier);
 
-            public new ReadAction<ElementForTest> FindReadable(string identifier) 
+            public new ReadAction<ElementForTest> FindReadable(string identifier)
                 => base.FindReadable(identifier);
         }
 
         private class ReadActionForTest : ReadAction<ElementForTest>
         {
-            protected override string GetText() 
+            protected override string GetText()
                 => throw new NotImplementedException();
 
-            protected override (bool, object) HasCapability(Capability capability) 
+            protected override (bool, object) HasCapability(Capability capability)
                 => throw new NotImplementedException();
         }
 
         private class ClickActionForTest : ClickAction<ElementForTest>
         {
-            public ClickActionForTest(ElementForTest continuation) 
+            public ClickActionForTest(ElementForTest continuation)
                 : base(continuation)
             {
             }
 
-            protected override (bool, object) HasCapability(Capability capability) 
+            protected override (bool, object) HasCapability(Capability capability)
                 => throw new NotImplementedException();
 
-            protected override void PerformClick() 
+            protected override void PerformClick()
                 => throw new NotImplementedException();
         }
 
         private class TypeActionForTest : TypeAction<ElementForTest>
         {
-            public TypeActionForTest(ElementForTest continuation) 
+            public TypeActionForTest(ElementForTest continuation)
                 : base(continuation)
             {
             }
 
-            protected override (bool, object) HasCapability(Capability capability) 
+            protected override (bool, object) HasCapability(Capability capability)
                 => throw new NotImplementedException();
 
-            protected override void PerformType(string text) 
+            protected override void PerformType(string text)
                 => throw new NotImplementedException();
         }
     }
