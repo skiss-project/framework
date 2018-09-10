@@ -24,10 +24,10 @@ namespace Skiss.Framework.Tests
         {
             var parameter = new object();
 
-            void action(object inparameter)
+            void Action(object inparameter)
                 => parameter = inparameter;
 
-            VerificationExtensions.Now((object)null, action);
+            VerificationExtensions.Now((object)null, Action);
 
             parameter.Should().BeNull();
         }
@@ -38,10 +38,10 @@ namespace Skiss.Framework.Tests
             object self = new object();
             object element = null;
 
-            void action(object el) 
+            void Action(object el)
                 => element = el;
 
-            VerificationExtensions.Now(self, action);
+            VerificationExtensions.Now(self, Action);
 
             element.Should().BeSameAs(self);
         }
@@ -50,11 +50,11 @@ namespace Skiss.Framework.Tests
         public void Now_GivenAction_ReturnsSelf()
         {
             object self = new object();
-            void action(object el)
+            void Action(object el)
             {
             }
 
-            VerificationExtensions.Now(self, action).Should().BeSameAs(self);
+            VerificationExtensions.Now(self, Action).Should().BeSameAs(self);
         }
     }
 }
