@@ -7,6 +7,7 @@
     <Authors>Simon Wendel</Authors>
     <Company />
     <Product>Skiss Framework</Product>
+    <Description>A .NET framework for simple, kind of interactive, system specifications.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -28,7 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta009" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta009">
+      <ExcludeAssets>All</ExcludeAssets>
+    </PackageReference>
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 
