@@ -8,6 +8,9 @@
     <Company />
     <Product>Skiss Framework</Product>
     <Description>A .NET framework for simple, kind of interactive, system specifications.</Description>
+    <PackageLicenseUrl>https://github.com/skiss-project/framework/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/skiss-project</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
