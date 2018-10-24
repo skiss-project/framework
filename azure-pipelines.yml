@@ -31,5 +31,11 @@ steps:
     Contents: '**\bin\$(BuildConfiguration)\**'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
+- task: NuGetCommand@2
+  displayName: 'NuGet pack'
+  inputs:
+    command: pack
+    versioningScheme: byPrereleaseNumber
+
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
