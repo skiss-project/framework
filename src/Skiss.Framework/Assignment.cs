@@ -19,6 +19,14 @@ namespace Skiss.Framework
     public static class Assignment<T>
         where T : Element<T>, new()
     {
+        /// <summary>
+        /// Start an assignment and resolve initial <see cref="Element{T}"/> to use as start
+        /// of fluent chain of <see cref="ElementAction{T}"/> invocations.
+        /// </summary>
+        /// <param name="task">
+        /// The name of the task, understood by the current <see cref="IDriver"/> implementation.
+        /// </param>
+        /// <returns>An <see cref="Element{T}"/> for fluent action chaining.</returns>
         public static T Start(string task)
         {
             Guard.AgainstNull(task, nameof(task));

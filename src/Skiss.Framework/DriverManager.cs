@@ -20,6 +20,20 @@ namespace Skiss.Framework
     {
         private static IDriver currentDriver = null;
 
+        /// <summary>
+        /// Gets or sets the current <see cref="IDriver"/> implementation.
+        /// </summary>
+        /// <value>
+        /// The current <see cref="IDriver"/> implementation used for finding <see cref="Element{T}"/>
+        /// objects and their <see cref="ElementAction{T}"/> capabilities.
+        /// </value>
+        /// <exception cref="NoDriverException">
+        /// Thrown when invoking get before implementation has been set.
+        /// </exception>
+        /// <remarks>
+        /// <see cref="Element{T}"/> and <see cref="ElementAction{T}"/> will not work
+        /// without setting <see cref="DriverManager.Current"/>.
+        /// </remarks>
         public static IDriver Current
         {
             get
