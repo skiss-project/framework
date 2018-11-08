@@ -21,6 +21,10 @@ namespace Skiss.Framework
         T Start<T>(string task)
             where T : Element<T>, new();
 
+        void Stop();
+
+        void Kill();
+
         TypeAction<T> FindTypable<T>(string identifier)
             where T : Element<T>;
 
@@ -29,7 +33,5 @@ namespace Skiss.Framework
 
         ReadAction<T> FindReadable<T>(string identifier)
             where T : Element<T>;
-
-        void Stop();
     }
 }

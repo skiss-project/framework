@@ -83,6 +83,16 @@ namespace Skiss.Framework.Tests
             driver.VerifyAll();
         }
 
+        [Test]
+        public void Kill_WhenInvoked_CallsDriver()
+        {
+            driver.Setup(d => d.Kill());
+
+            sut.Kill();
+
+            driver.VerifyAll();
+        }
+
         private class ElementForTest : Element<ElementForTest>
         {
             public new TypeAction<ElementForTest> FindTypable(string identifier)

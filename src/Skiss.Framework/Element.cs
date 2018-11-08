@@ -21,6 +21,8 @@ namespace Skiss.Framework
     {
         public void Stop() => DriverManager.Current.Stop();
 
+        public void Kill() => DriverManager.Current.Kill();
+
         protected TypeAction<T> FindTypable(string identifier)
             => DriverManager.Current.FindTypable<T>(identifier);
 
