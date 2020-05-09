@@ -28,8 +28,7 @@ namespace Skiss.Framework.Tests
         {
             Action now = () => VerificationExtensions.Now(new object(), null);
 
-            now
-                .Should().ThrowExactly<ArgumentNullException>()
+            now.Should().ThrowExactly<ArgumentNullException>()
                 .Which.ParamName.Should().Be("action");
         }
 

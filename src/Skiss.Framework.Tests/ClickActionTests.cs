@@ -24,9 +24,7 @@ namespace Skiss.Framework.Tests
     public class ClickActionTests
     {
         private object element;
-
         private CommonTestElement continuation;
-
         private ClickActionForTest sut;
 
         [SetUp]
@@ -41,9 +39,7 @@ namespace Skiss.Framework.Tests
         public void Constructor_GivenNullContinuation_ThrowsException()
         {
             Action constructing = () => new ClickActionForTest(null);
-
-            constructing
-                .Should().ThrowExactly<ArgumentNullException>()
+            constructing.Should().ThrowExactly<ArgumentNullException>()
                 .Which.ParamName.Should().Be("continuation");
         }
 

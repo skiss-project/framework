@@ -29,9 +29,7 @@ namespace Skiss.Framework.Tests
         public void Start_GivenNullTask_ThrowsException()
         {
             Action starting = () => Assignment<CommonTestElement>.Start(null);
-
-            starting
-                .Should().ThrowExactly<ArgumentNullException>()
+            starting.Should().ThrowExactly<ArgumentNullException>()
                 .Which.ParamName.Should().Be("task");
         }
 

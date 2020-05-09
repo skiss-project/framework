@@ -24,11 +24,7 @@ namespace Skiss.Framework.Tests
     public class ElementActionTests
     {
         private Capability capability;
-
         private object element;
-
-        private string identifier;
-
         private ElementActionForTest sut;
 
         [SetUp]
@@ -38,7 +34,6 @@ namespace Skiss.Framework.Tests
 
             capability = fixture.Create<Capability>();
             element = fixture.Create<object>();
-            identifier = fixture.Create<string>();
 
             sut = new ElementActionForTest();
         }
@@ -62,9 +57,7 @@ namespace Skiss.Framework.Tests
         public void EnsureCapability_GivenIdentifierMatchesCapability_DoesNotThrowException()
         {
             sut.HasCapabilityReturn = (true, element);
-
             Action ensuring = () => sut.EnsureCapability(capability);
-
             ensuring.Should().NotThrow();
         }
 

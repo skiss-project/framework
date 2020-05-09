@@ -24,11 +24,8 @@ namespace Skiss.Framework.Tests
     public class TypeActionTests
     {
         private CommonTestElement continuation;
-
         private string text;
-
         private object element;
-
         private TypeActionForTest sut;
 
         [SetUp]
@@ -45,8 +42,7 @@ namespace Skiss.Framework.Tests
         {
             Action constructing = () => new TypeActionForTest(null);
 
-            constructing
-                .Should().ThrowExactly<ArgumentNullException>()
+            constructing.Should().ThrowExactly<ArgumentNullException>()
                 .Which.ParamName.Should().Be("continuation");
         }
 
@@ -55,8 +51,7 @@ namespace Skiss.Framework.Tests
         {
             Action typing = () => sut.Type(null);
 
-            typing
-                .Should().ThrowExactly<ArgumentNullException>()
+            typing.Should().ThrowExactly<ArgumentNullException>()
                 .Which.ParamName.Should().Be("text");
         }
 

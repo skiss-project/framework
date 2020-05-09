@@ -25,9 +25,7 @@ namespace Skiss.Framework.Tests
     public class ElementTests
     {
         private Mock<IDriver> driver;
-
         private string identifier;
-
         private ElementForTest sut;
 
         [SetUp]
@@ -77,9 +75,7 @@ namespace Skiss.Framework.Tests
         public void Stop_WhenInvoked_CallsDriver()
         {
             driver.Setup(d => d.Stop());
-
             sut.Stop();
-
             driver.VerifyAll();
         }
 
@@ -87,9 +83,7 @@ namespace Skiss.Framework.Tests
         public void Kill_WhenInvoked_CallsDriver()
         {
             driver.Setup(d => d.Kill());
-
             sut.Kill();
-
             driver.VerifyAll();
         }
 
