@@ -16,6 +16,8 @@
 
 namespace Skiss.Framework
 {
+    using GuardStatements;
+
     public static class Assignment<T>
         where T : Element<T>, new()
     {

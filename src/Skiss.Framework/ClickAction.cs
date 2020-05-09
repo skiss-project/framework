@@ -16,6 +16,8 @@
 
 namespace Skiss.Framework
 {
+    using GuardStatements;
+
     public abstract class ClickAction<T> : ElementAction<T>
         where T : Element<T>
     {

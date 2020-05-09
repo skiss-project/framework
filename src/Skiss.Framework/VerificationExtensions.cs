@@ -17,6 +17,7 @@
 namespace Skiss.Framework
 {
     using System;
+    using GuardStatements;
 
     public static class VerificationExtensions
     {
